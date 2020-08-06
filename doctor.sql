@@ -15,7 +15,7 @@ CREATE TABLE Patient(
 Patient_id INT PRIMARY KEY,
 Name VARCHAR(20),
 DOB DATE,
-Address VARCHAR(20),
+Address VARCHAR(20)
 );
 
 CREATE TABLE Doctor_patient(
