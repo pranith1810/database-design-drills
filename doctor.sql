@@ -1,21 +1,21 @@
 CREATE TABLE Doctor(
 Doctor_id INT PRIMARY KEY,
-Doctor_name VARCHAR(20),
-Secretary VARCHAR(20)
+Doctor_name TEXT,
+Secretary TEXT
 );
 
 CREATE TABLE Prescription(
 Prescription_id INT PRIMARY KEY,
-Drug VARCHAR(20),
-Date DATE,
+Drug TEXT,
+Date_given DATE,
 Dosage INT
 );
 
 CREATE TABLE Patient(
 Patient_id INT PRIMARY KEY,
-Name VARCHAR(20),
+Name TEXT,
 DOB DATE,
-Address VARCHAR(20)
+Address TEXT
 );
 
 CREATE TABLE Doctor_patient(

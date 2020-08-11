@@ -1,11 +1,11 @@
 CREATE TABLE Location(
 Location_id INT PRIMARY KEY,
-Location_name VARCHAR(20)
+Location_name TEXT
 );
 
 CREATE TABLE Manager(
 Manager_id INT PRIMARY KEY,
-Manager_name VARCHAR(20), 
+Manager_name TEXT, 
 Mnager_location_id INT REFERENCES Location(Location_id)
 );
 
@@ -17,13 +17,13 @@ Completion_date DATE
 
 CREATE TABLE Staff(
 Staff_id INT PRIMARY KEY,
-Staff_name VARCHAR(20),
+Staff_name TEXT,
 Staff_location_id INT REFERENCES Location(Location_id)
 );
 
 CREATE TABLE Client(
 Client_id INT PRIMARY KEY,
-Name VARCHAR(20),
+Client_name TEXT,
 Location_id INT REFERENCES Location(Location_id),
 Manager_id  INT REFERENCES Manager(Manager_id),
 Contract_id INT REFERENCES Contract(Contract_id),

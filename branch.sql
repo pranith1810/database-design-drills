@@ -1,13 +1,13 @@
 CREATE TABLE Book(
-ISBN VARCHAR(20) PRIMARY KEY,
-Title VARCHAR(20),
-Author VARCHAR(20),
-Publisher VARCHAR(20)
+ISBN VARCHAR(15) PRIMARY KEY,
+Title TEXT,
+Author TEXT,
+Publisher TEXT
 );
 
 CREATE TABLE Branch(
 Branch_id INT PRIMARY KEY,
-Branch_addr VARCHAR(20)
+Branch_addr TEXT
 );
 
 CREATE TABLE branch_books(
