@@ -25,7 +25,7 @@ Address TEXT
 );
 
 CREATE TABLE Patient_doctor(
-Patient_id INT PRIMARY KEY,
-Prescription_id INT REFERENCES Prescription(Prescription_id),
-Doctor_id INT REFERENCES Doctor(Doctor_id)
+Patient_id VARCHAR(36) PRIMARY KEY,
+Prescription_id VARCHAR(36) REFERENCES Prescription(Prescription_id),
+Doctor_id VARCHAR(36) REFERENCES Doctor(Doctor_id)
 );
