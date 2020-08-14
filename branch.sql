@@ -1,12 +1,18 @@
-CREATE TABLE Book(
+CREATE TABLE Publishers(
+id VARCHAR(36) PRIMARY KEY,
+name TEXT,
+Address TEXT
+);
+
+CREATE TABLE Books(
 ISBN VARCHAR(15) PRIMARY KEY,
 Title TEXT,
 Author TEXT,
-Publisher TEXT
+Publisher_id VARCHAR(36) REFERENCES Publishers(id)
 );
 
 CREATE TABLE Branch(
-Branch_id INT PRIMARY KEY,
+Branch_id VARCHAR(36) PRIMARY KEY,
 Branch_addr TEXT
 );
 
