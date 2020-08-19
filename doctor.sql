@@ -12,17 +12,13 @@ Brand_name TEXT
 
 CREATE TABLE Prescription(
 Prescription_id VARCHAR(36) PRIMARY KEY,
-Drug1 VARCHAR(36) REFERENCES Drug_id,
-Dosage_drug1 TEXT,
-Drug2 VARCHAR(36) REFERENCES Drug_id,
-Dosage_drug2 TEXT,
-Drug3 VARCHAR(36) REFERENCES Drug_id,
-Dosage_drug3 TEXT,
-Drug4 VARCHAR(36) REFERENCES Drug_id,
-Dosage_drug4 TEXT,
-Drug5 VARCHAR(36) REFERENCES Drug_id,
-Dosage_drug5 TEXT,
 Date_given DATE
+);
+
+CREATE TABLE Prescription_drugs(
+Prescription_id VARCHAR(36) REFERENCES Prescription(Prescription_id),
+Drug_id VARCHAR(36) REFERENCES Drug(Drug_id),
+Dosage TEXT
 );
 
 CREATE TABLE Patient(
